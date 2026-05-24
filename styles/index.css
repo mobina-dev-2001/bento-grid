@@ -1,0 +1,330 @@
+@import url("./fonts.css");
+
+:root {
+  --purple-100: rgb(219, 209, 252);
+  --purple-500: rgb(117, 81, 220);
+
+  --yellow-100: rgb(249, 238, 226);
+  --yellow-500: rgb(255, 204, 106);
+
+  --gray-50: rgb(246, 245, 246);
+
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+}
+
+/*----------------------------------------------------------------------*/
+
+.text-yellow {
+  color: var(--yellow-500);
+}
+
+.text-purple {
+  color: var(--purple-500);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-preset-1 {
+  font-size: 2.875rem;
+  font-weight: 500;
+  letter-spacing: -4px;
+  line-height: 2.625rem;
+}
+
+.text-preset-2 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -1.85px;
+  line-height: 1.75rem;
+}
+
+.text-preset-3 {
+  font-size: 1.625rem;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  line-height: 1.5rem;
+}
+
+/*----------------------------------------------------------------------*/
+
+body {
+  padding-block: clamp(2rem, 6.75vw, 5.188rem);
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
+  background-color: var(--gray-50);
+  color: var(--black);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+main {
+  display: grid;
+  justify-self: center;
+  grid-template-areas: "section1" "section2" "section3" "section4" "section5" "section6" "section7" "section8";
+  gap: 2rem;
+  height: 100%;
+  max-width: 70rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+section:nth-child(1) {
+  grid-area: section1;
+  place-content: center;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  background-color: var(--purple-500);
+  color: var(--white);
+  text-align: center;
+}
+
+section:nth-child(1) > h1 {
+  max-width: 14ch;
+  margin-inline: auto;
+}
+
+section:nth-child(1) div {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+section:nth-child(2) {
+  grid-area: section2;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  background-color: var(--white);
+}
+
+section:nth-child(2) div {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+section:nth-child(2) img {
+  border-radius: 2.125rem;
+  box-shadow: -0.625rem 0.75rem 1.563rem rgba(98, 26, 123, 5%);
+}
+
+section:nth-child(3) {
+  grid-area: section3;
+  padding: 1rem;
+  padding-block-end: 0;
+  background-color: var(--yellow-500);
+}
+
+section:nth-child(3) img {
+  position: relative;
+  top: 1rem;
+  max-width: 13rem;
+}
+
+section:nth-child(4) {
+  grid-area: section4;
+  place-content: center;
+  place-items: center;
+  gap: 1.5rem;
+  padding: 2rem clamp(1rem, 4.25vw, 2rem);
+  background-color: var(--purple-100);
+  text-align: center;
+}
+
+section:nth-child(4) h2 {
+  letter-spacing: -1.8px;
+}
+
+section:nth-child(4) h2,
+section:nth-child(4) p {
+  max-width: 28ch;
+}
+
+section:nth-child(4) img {
+  width: 22.313rem;
+}
+
+section:nth-child(5) {
+  grid-area: section5;
+  place-items: center;
+  place-content: center;
+  gap: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--purple-500);
+  color: var(--white);
+  text-align: center;
+}
+
+section:nth-child(5) h2 {
+  max-width: 16.063rem;
+  letter-spacing: -2px;
+}
+
+section:nth-child(6) {
+  grid-area: section6;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+}
+
+section:nth-child(6) div {
+  display: grid;
+  gap: 0.938rem;
+}
+
+section:nth-child(6) img {
+  max-width: 11.188rem;
+}
+
+section:nth-child(7) {
+  grid-area: section7;
+  place-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--yellow-100);
+}
+
+section:nth-child(7) img {
+  max-width: 11.904rem;
+}
+
+section:nth-child(8) {
+  grid-area: section8;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--yellow-500);
+}
+
+section:nth-child(8) img {
+  max-width: 13.75rem;
+}
+
+@media (min-width: 40rem) {
+  .text-preset-1 {
+    font-size: 3.375rem;
+    line-height: 3rem;
+  }
+
+  .text-preset-2 {
+    font-size: 2.25rem;
+    line-height: 1.875rem;
+  }
+
+  .text-preset-3 {
+    font-size: 1.75rem;
+    line-height: 1.625rem;
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20.25rem 15.438rem repeat(4, auto);
+    grid-template-areas:
+      "section1 section1"
+      "section2 section3"
+      "section4 section4"
+      "section5 section5"
+      "section6 section6"
+      "section7 section8";
+  }
+
+  section:nth-child(1) {
+    padding: 2rem;
+  }
+
+  section:nth-child(2) h2 {
+    max-width: 14ch;
+  }
+
+  section:nth-child(3) {
+    padding: 1.5rem;
+    padding-block-end: 0;
+  }
+
+  section:nth-child(4) img {
+    max-width: 22.313rem;
+  }
+
+  section:nth-child(5) {
+    flex-direction: row;
+    text-align: start;
+  }
+
+  section:nth-child(6) {
+    flex-direction: row;
+  }
+
+  section:nth-child(7) {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .text-preset-1 {
+    font-size: 3.875rem;
+    letter-spacing: -6px;
+    line-height: 3.625rem;
+  }
+
+  .text-preset-2 {
+    font-size: 2.5rem;
+    letter-spacing: -3.9px;
+    line-height: 2.25rem;
+  }
+
+  .text-preset-3 {
+    font-size: 2rem;
+    letter-spacing: -2px;
+    line-height: 1.75rem;
+  }
+
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 20.25rem 3.75rem 9.75rem 15.438rem;
+    grid-template-areas:
+      "section7 section1 section1 section4"
+      "section7 section2 section3 section4"
+      "section8 section2 section3 section4"
+      "section8 section6 section5 section5";
+  }
+
+  section:nth-child(4) {
+    place-items: start;
+    text-align: start;
+  }
+
+  section:nth-child(4) h2 {
+    letter-spacing: -2.75px;
+  }
+
+  section:nth-child(5) {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  section:nth-child(5) h2 {
+    letter-spacing: -2px;
+  }
+
+  section:nth-child(6) {
+    flex-direction: column;
+  }
+
+  section:nth-child(7) {
+    padding: 2rem;
+  }
+
+  section:nth-child(8) img {
+    margin-inline-end: -1.5rem;
+  }
+}
