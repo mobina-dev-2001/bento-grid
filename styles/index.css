@@ -51,6 +51,7 @@
 /*----------------------------------------------------------------------*/
 
 body {
+  display: grid;
   padding-block: clamp(2rem, 6.75vw, 5.188rem);
   padding-inline: clamp(1rem, 4vw, 2.5rem);
   background-color: var(--gray-50);
@@ -77,7 +78,7 @@ section {
   overflow: hidden;
 }
 
-section:nth-child(1) {
+.section-1 {
   grid-area: section1;
   place-content: center;
   gap: 1.5rem;
@@ -87,18 +88,18 @@ section:nth-child(1) {
   text-align: center;
 }
 
-section:nth-child(1) > h1 {
+.section-1 > h1 {
   max-width: 14ch;
   margin-inline: auto;
 }
 
-section:nth-child(1) div {
+.section-1 div {
   display: grid;
   justify-items: center;
   gap: 0.5rem;
 }
 
-section:nth-child(2) {
+.section-2 {
   grid-area: section2;
   justify-content: space-between;
   gap: 1rem;
@@ -106,31 +107,31 @@ section:nth-child(2) {
   background-color: var(--white);
 }
 
-section:nth-child(2) div {
+.section-2 div {
   display: flex;
   align-items: center;
   gap: 0.625rem;
 }
 
-section:nth-child(2) img {
+.section-2 img {
   border-radius: 2.125rem;
   box-shadow: -0.625rem 0.75rem 1.563rem rgba(98, 26, 123, 5%);
 }
 
-section:nth-child(3) {
+.section-3 {
   grid-area: section3;
   padding: 1rem;
   padding-block-end: 0;
   background-color: var(--yellow-500);
 }
 
-section:nth-child(3) img {
+.section-3 img {
   position: relative;
   top: 1rem;
   max-width: 13rem;
 }
 
-section:nth-child(4) {
+.section-4 {
   grid-area: section4;
   place-content: center;
   place-items: center;
@@ -140,20 +141,20 @@ section:nth-child(4) {
   text-align: center;
 }
 
-section:nth-child(4) h2 {
+.section-4 h2 {
   letter-spacing: -1.8px;
 }
 
-section:nth-child(4) h2,
-section:nth-child(4) p {
+.section-4 h2,
+.section-4 p {
   max-width: 28ch;
 }
 
-section:nth-child(4) img {
+.section-4 img {
   width: 22.313rem;
 }
 
-section:nth-child(5) {
+.section-5 {
   grid-area: section5;
   place-items: center;
   place-content: center;
@@ -164,12 +165,12 @@ section:nth-child(5) {
   text-align: center;
 }
 
-section:nth-child(5) h2 {
+.section-5 h2 {
   max-width: 16.063rem;
   letter-spacing: -2px;
 }
 
-section:nth-child(6) {
+.section-6 {
   grid-area: section6;
   justify-content: space-between;
   gap: 1.5rem;
@@ -177,16 +178,16 @@ section:nth-child(6) {
   background-color: var(--white);
 }
 
-section:nth-child(6) div {
+.section-6 div {
   display: grid;
   gap: 0.938rem;
 }
 
-section:nth-child(6) img {
+.section-6 img {
   max-width: 11.188rem;
 }
 
-section:nth-child(7) {
+.section-7 {
   grid-area: section7;
   place-content: center;
   gap: 1.5rem;
@@ -194,11 +195,11 @@ section:nth-child(7) {
   background-color: var(--yellow-100);
 }
 
-section:nth-child(7) img {
+.section-7 img {
   max-width: 11.904rem;
 }
 
-section:nth-child(8) {
+.section-8 {
   grid-area: section8;
   justify-content: space-between;
   gap: 1.5rem;
@@ -206,7 +207,7 @@ section:nth-child(8) {
   background-color: var(--yellow-500);
 }
 
-section:nth-child(8) img {
+.section-8 img {
   max-width: 13.75rem;
 }
 
@@ -238,33 +239,33 @@ section:nth-child(8) img {
       "section7 section8";
   }
 
-  section:nth-child(1) {
+  .section-1 {
     padding: 2rem;
   }
 
-  section:nth-child(2) h2 {
+  .section-2 h2 {
     max-width: 14ch;
   }
 
-  section:nth-child(3) {
+  .section-3 {
     padding: 1.5rem;
     padding-block-end: 0;
   }
 
-  section:nth-child(4) img {
+  .section-4 img {
     max-width: 22.313rem;
   }
 
-  section:nth-child(5) {
+  .section-5 {
     flex-direction: row;
     text-align: start;
   }
 
-  section:nth-child(6) {
+  .section-6 {
     flex-direction: row;
   }
 
-  section:nth-child(7) {
+  .section-7 {
     padding: 1.5rem;
   }
 }
@@ -298,33 +299,33 @@ section:nth-child(8) img {
       "section8 section6 section5 section5";
   }
 
-  section:nth-child(4) {
+  .section-4 {
     place-items: start;
     text-align: start;
   }
 
-  section:nth-child(4) h2 {
+  .section-4 h2 {
     letter-spacing: -2.75px;
   }
 
-  section:nth-child(5) {
+  .section-5 {
     justify-content: space-between;
     gap: 0;
   }
 
-  section:nth-child(5) h2 {
+  .section-5 h2 {
     letter-spacing: -2px;
   }
 
-  section:nth-child(6) {
+  .section-6 {
     flex-direction: column;
   }
 
-  section:nth-child(7) {
+  .section-7 {
     padding: 2rem;
   }
 
-  section:nth-child(8) img {
+  .section-8 img {
     margin-inline-end: -1.5rem;
   }
 }
